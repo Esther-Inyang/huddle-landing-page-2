@@ -17,13 +17,6 @@ body{
     min-height: 100vh;
 }
 
-color {
-    color: hsl(322, 100%, 66%);
-    color: hsl(193, 100%, 96%);
-    color: hsl(192, 100%, 9%);
-    color: hsl(208, 11%, 55%);
-}
-
 h1,
 h2,
 h3,
@@ -40,7 +33,6 @@ a{
 
 .hero-section{
     width: 100%;
-    /* height: auto; */
     padding: 0 0 6rem 0;
     background-color: hsl(193, 100%, 96%);
     background-image: url("./images/bg-hero-mobile.svg");
@@ -49,8 +41,7 @@ a{
     background-position: center;
 }
 
-.header-section{
-    /* max-width: 100%; */
+.header{
     padding: 3rem 2rem;
     display: flex;
     align-items: center;
@@ -83,22 +74,20 @@ a{
     background-color: hsl(0, 0%, 100%);
     box-shadow: 0 1px 5px rgb(0, 0, 0, .3);
     text-shadow: 0 1px 1.2px hsl(192, 100%, 9%, .5);
+    transition: transform .2s linear;
 }
 
-/* .tryit-btn:hover{
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(322, 100%, 66%);
-} */
+.tryit-btn:hover{
+    text-shadow: none;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgb(0, 0, 0, .3);
+}
 
 /*******ARTICLES SECTION*********/
 .about-page{
     width: 85%;
     margin: 0 auto 4rem;
     text-align: center;
-}
-
-.page-info-div{
-    /* padding: 2rem 1.5rem 0; */
 }
 
 .page-info-title{ 
@@ -113,13 +102,8 @@ a{
     font-size: 1.6rem;
     color: hsl(192, 100%, 9%);
     line-height: 2.5rem;
-    margin: 4rem 0;
+    margin: 2.5rem 0 4rem;
     padding: 0 .5rem
-}
-
-.page-info,
-.register-btn{
-     
 }
 
 .getstarted-btn{
@@ -135,8 +119,7 @@ a{
     box-shadow: 0 .3rem .5rem rgb(0, 0, 0,.5);
 }
 
-.getstarted-btn:hover,
-.tryit-btn:hover{
+.getstarted-btn:hover{
     color: hsl(0, 0%, 100%);
     transition: .2s ease-in;
     background-color: hsl(300, 69%, 71%);
@@ -234,7 +217,6 @@ a{
     width: 100%;
     padding: 1rem;
     color: hsl(0, 0%, 100%);
-    /* margin-top: 12rem; */
 }
 
 .contact-logo,
@@ -282,13 +264,13 @@ a{
 .footer-link{
     padding: .5rem 1rem;
     display: block;
+    transition: .2s ease-in;
 }
 
-/* .location-icon,
-.phone-icon,
-.email-icon{
-    /* margin-right: 1.8rem; 
-} */
+.footer-link:hover{
+    color: hsl(208, 11%, 55%);
+    text-decoration: underline;
+}
 
 .footer-links-list{
     margin-top: 7rem;
@@ -302,16 +284,6 @@ a{
     cursor: pointer;
     text-decoration: none;
 }
-
-/* .media-and-copyright{
-    width: 90%;
-    height: 10rem;
-    margin: 4rem auto 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-} */
 
 /*******Social Media Section*******/
 .social-media-icons{
@@ -371,7 +343,7 @@ a{
 @media screen and (min-width: 768px){
     
     .hero-section{
-        padding: 2rem 3rem 10rem;/*changed*/
+        padding: 2rem 3rem 10rem;
     }
 
     .logo{
@@ -448,13 +420,11 @@ a{
     }
 
     .footer-intro{
-        /* styles same as article (scroll up) */
         width: 80%;
         padding: 6rem 0;
     }
 
     .footer-intro h3{
-        /* styles same as article-title (scroll up) */
         font-size: 2.7rem;
         margin: 0 0 5rem 0;
     }
@@ -472,8 +442,8 @@ a{
     }
 
     .footer-logo{
-        width: 35px;
-        height: 30px;
+        width: 3.5rem;
+        height: 3rem;
     }
 
     .location-text,
@@ -500,130 +470,86 @@ a{
         font-size: 1.5rem;
     }
 
-
 }
 
 
-@media screen and (min-width: 992px){
-    
+@media screen and (min-width: 992px){ 
     .hero-section{
-        background-image: url("./images/bg-hero-desktop.svg"); /*changed*/
+        background-image: url("./images/bg-hero-desktop.svg"); 
         padding: 2rem 3rem 10rem;
     }
 
-    /* .logo{
-        width: 5rem;
-        height: 5rem;
-    }
-
-    .page-title{
-        font-size: 4rem;
-    }*/
-
     .tryit-btn{
-        padding: 1rem 6rem; /*changed*/
-        font-size: 2rem;
+        padding: 1rem 6rem; 
     } 
 
     /*******ARTICLES SECTION*********/
-
     .about-and-hero{
         display: flex;
         align-items: center;
-        justify-content: space-between; /*All changed*/
+        justify-content: space-between; 
     }
    
     .about-page{
-        width: 45%; /*changed*/
-        text-align: left; /*changed*/
-        margin: 0; /*changed*/
-        padding: 4rem 4rem 0 2rem; /*changed*/
+        width: 45%; 
+        text-align: left; 
+        margin: 0; 
+        padding: 4rem 4rem 0 2rem; 
     }
 
     .page-info-title{ 
-        padding: 0 3rem 0 0; /*changed*/
-        font-size: 3.5rem; /*changed*/
+        padding: 0 3rem 0 0; 
+        font-size: 3.5rem; 
     }
 
     .page-info{
-        font-size: 2rem; /*changed*/
-        line-height: 3rem; /*changed*/
-        margin-bottom: 7rem;
+        font-size: 2rem; 
+        line-height: 3rem; 
     }
 
-    /* .getstarted-btn{
-        padding: 1.5rem 4.5rem;
-        border-radius: 3rem;
-        font-size: 2rem;
-    } */
-
     .hero-image-div{
-        width: 50%; /*changed*/
-        height: 53rem; /*changed*/
+        width: 50%; 
+        height: 53rem; 
     }
 
     .hero-image{
-        margin-top: 5rem; /*changed*/
+        margin-top: 5rem; 
     }
 
     /*********Article-Section*********/
-
-    .article-section{
-        margin-bottom: 23rem;
-    }
-
     .article{
-        width: 80%; /*changed*/
-        margin: 8rem auto;
-
-        display: flex; /*changed*/
-        align-items: center; /*changed*/
-        justify-content: space-between; /*changed*/
+        width: 70%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
     }
 
     .article-1,
     .article-3{
-        flex-direction: row-reverse; /*changed*/
+        flex-direction: row-reverse; 
     }
 
     .article-div{
-        text-align: left; /*changed*/
-        width: 45%; /*changed*/
+        text-align: left; 
+        width: 45%; 
     }
 
     .article-image{
-        width: 50%; /*changed*/
-        height: 40rem; /*changed*/
+        width: 50%; 
+        height: 40rem; 
         margin: 2rem 0 5rem 0;
     }
 
-    .article-title{
-        font-size: 3rem;
-    }
-
-    .article-text{
-        line-height: 3rem;
-        font-size: 2rem;
-    }
-
     /********Footer-section********/
-    .footer{
-        padding-top: 23rem;
-    }
-
     .footer-intro{
-        /* styles same as article (scroll up) */
-        width: 50%; /*changed*/
-        padding: 4rem 0; /*changed*/
+        width: 50%; 
+        padding: 4rem 0; 
     }
 
     .footer-intro h3{
-        /* styles same as article-title (scroll up) */
         font-size: 2.7rem;
         margin: 0 0 5rem 0;
     }
-
-    /* *****************************************ALL BELOW CHANGED */
 
     .footer-info-div{
         display: flex;
@@ -633,6 +559,11 @@ a{
 
     .footer-contact-info{
         width: 30%;
+    }
+
+    .footer-logo{
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .footer-links-list{
@@ -649,42 +580,7 @@ a{
         width: 40%;
     }
 
-/* ************************************************ALL ABOVE CHANGED */
-
-
-
-    .contact-icon-div{
-        width: 5%;
-        margin-top: 1.5rem;
-    }
-
-    .footer-logo-title,
-    .location-text,
-    .phone-number,
-    .email-address{
-        width: 90%;
-    }
-
-    .footer-logo{
-        width: 35px;
-        height: 30px;
-    }
-
-    .location-text,
-    .phone-number,
-    .email-address,
-    .footer-link{
-        color: hsl(193, 100%, 96%);
-        font-size: 2.1rem;
-        line-height: 3.5rem;
-    }
-    
     /********Social media******/
-    /* .social-icon{  
-        font-size: 2.2rem;
-        border: 2px solid hsl(0, 0%, 100%);
-    } */
-
     .social-media-icons{
        margin-top: 9rem;
     }
@@ -694,13 +590,69 @@ a{
         text-align: right;
         margin: 0;
         padding: 3rem;
-        font-size: 2rem;   /*ALL CHANGED*/
+        font-size: 2rem;   
+    } 
+}
+
+
+@media screen and (min-width: 1440px){ 
+    .hero-section{
+        height: 90vh;
+        padding: 5rem 5rem 5rem;
+    }
+   
+    .about-page{
+        width: 40%; 
     }
 
-    /*******For Attribution********/
-    .attribution{ 
-          
+    .page-info-title{ 
+        line-height: 6rem;
+        font-size: 5rem; 
     }
 
-    
+    .page-info{
+        font-size: 3rem; 
+        line-height: 5rem; 
+    }
+
+    .hero-image-div{
+        width: 45%; 
+        height: 60rem; 
+    }
+
+    /*********Article-Section*********/
+    .article{
+        width: 70%; 
+        padding: 8rem; 
+    }
+
+    .article-div{ 
+        width: 40%; 
+    }
+
+    .article-title{
+        font-size: 4.5rem;
+        line-height: 5rem;
+    }
+
+    .article-text{
+        line-height: 3.5rem;
+    }
+
+    .article-image{
+        width: 50%; 
+        height: 55rem; 
+        margin: 0;
+    }
+
+    /********Footer-section********/
+    .footer-intro{
+        width: 40%; 
+        padding: 5rem 0; 
+    }
+
+    .footer-info-div{
+        padding: 0 5rem;
+    }
+
 }
